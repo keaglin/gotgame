@@ -77,7 +77,7 @@ WSGI_APPLICATION = 'lfg_api.wsgi.application'
 # https://docs.djangoproject.com/en/2.0/ref/settings/#databases
 
 DATABASES = {
-    'dev': {
+    'default': {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'lfg_db',
         'USER': 'kevon',
@@ -131,4 +131,4 @@ import django_heroku
 django_heroku.settings(locals())
 
 import dj_database_url
-DATABASES['default'] = dj_database_url.config(conn_max_age=600, ssl_require=True)
+# DATABASES['default'] = dj_database_url.config(conn_max_age=600, ssl_require=True)
