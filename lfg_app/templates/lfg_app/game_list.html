@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="row">
+  {% for game in object_list %}
+    <ul>
+      <li class="col s3 center">
+        <div><img src={{ game.img }} alt={{game.title}} "cover"></div>
+      </li>
+      {% empty %}
+      <li>No posts yet.</li>
+  {% endfor %}
+    </ul>
+</div>
+{% endblock %}

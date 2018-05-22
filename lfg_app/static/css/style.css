@@ -1,0 +1,113 @@
+* {
+  box-sizing: border-box;
+  /* border: 2px black solid; */
+}
+
+body {
+  margin: 0;
+  font-family: sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: white;
+}
+
+header, footer, main {
+  min-width: 100%;
+}
+
+footer {
+  margin-bottom: 0 !important;
+}
+
+nav {
+  box-shadow: none !important;
+}
+
+.nav-wrapper li a:hover {
+  background-color: #1a237e !important; 
+  text-decoration: overline underline;
+}
+/* .nav-wrapper li a {
+  background-color: #1a237e !important; 
+  border-bottom: 1px dotted;
+  border-top: 1px dotted;
+  padding-top: 3px;
+  padding-bottom: 3px;
+} */
+/* 
+nav ul a:before {
+  content: '';
+  bottom: -10px;
+  top: -10px;
+  border-width: 1px 0;
+  border-style: solid;
+  min-width: 100%;
+}
+nav ul a:after {
+  content: '';
+  bottom: -10px;
+  top: -10px;
+  border-width: 1px 0;
+  border-style: solid;
+  min-width: 100%;
+} */
+
+a {
+  color: #69f0ae !important;
+}
+
+a:hover {
+  color: white !important;
+}
+
+.brand-logo:hover {
+  color: #69f0ae !important;
+}
+
+main {
+  min-height: 100vh;
+  background-image: url('../img/gotgame-bg.jpg');
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  margin-top: -20px;
+  margin-bottom: 0 !important;
+}
+
+/* #background {
+  position: relative;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0; 
+  min-width: 100%;
+  min-height: 100vh;
+  margin-top: -20px;
+  margin-bottom: 0;
+  background-image: url("../img/ben-neale-297658-unsplash.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  filter: blur(10px) brightness(60%); 
+  z-index: -1; 
+}
+*/
+
+/* #app {
+  position: absolute;
+  z-index: 1;
+} */
+
+.sidenav {
+  background: #1a237e;
+}
+
+li {
+  list-style: none;
+}
+
+li img {
+  height: 250px;
+  width: 200px;
+}

@@ -1,0 +1,1 @@
+web: gunicorn lfg_app.wsgi --log-file -
