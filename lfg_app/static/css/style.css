@@ -111,3 +111,11 @@ li img {
   height: 250px;
   width: 200px;
 }
+
+.post {
+  border: 2px white solid;
+}
+
+.post-title {
+  background: purple;
+}
