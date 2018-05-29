@@ -1,10 +1,8 @@
 from django.db import models
 from django.contrib.auth.models import User
 
-# Create your models here.
 class Game(models.Model):
     title = models.CharField(max_length=40)
-    # img = models.ImageField(upload_to='games')
     img = models.CharField(max_length=140)
 
     def __str__(self):

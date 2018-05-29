@@ -20,32 +20,22 @@
           <a href="/app/games" class="brand-logo center">Got Game?</a>
           <a href="#" data-target="mobile-demo" class="sidenav-trigger right"><i class="fas fa-ellipsis-v"></i></a>
           <ul id="nav-mobile" class="hide-on-med-and-down">
-            <div class="left">
-              <li><a href="/app/games">GAMES</a></li>
-              <li><a href="/forum">FORUM</a></li>
-            </div>
-            <div class="right">
-              {% if user.is_authenticated %}
-                <li class="center"><a href="/app/login">LOGOUT</a></li>
-              {% else %}
-                <li class="center"><a href="/app/signup">SIGN UP</a></li> 
-                <li class="center"><a href="/app/login">LOGIN</a></li>
-              {% endif %} 
-            </div>
+            <li><a href="/app/games">GAMES</a></li>
+            <li><a href="/forum">FORUM</a></li>
+            <!-- <li><a href="/posts">POSTS</a></li> -->
+          <!-- </ul>
+          <ul class="right hide-on-med-and-down"> -->
+            <li class="right"><a href="/app/signup">SIGN UP</a></li> 
+            <li class="right"><a href="/app/login">LOGIN</a></li>
+            <li class="right"><a href="/app/logout">LOGOUT</a></li>
           </ul>
           <ul class="sidenav" id="mobile-demo">
-            <div class="left">
-              <li><a href="/app/games">GAMES</a></li>
-              <li><a href="/forum">FORUM</a></li>
-            </div>
-            <div class="right">
-              {% if user.is_authenticated %}
-                <li class="center"><a href="/app/login">LOGOUT</a></li>
-              {% else %}
-                <li class="center"><a href="/app/signup">SIGN UP</a></li> 
-                <li class="center"><a href="/app/login">LOGIN</a></li>
-              {% endif %} 
-            </div>
+            <li class="center"><a href="/app/games">GAMES</a></li>
+            <li class="center"><a href="/forum">FORUM</a></li>
+            <!-- <li class="center"><a href="/posts">POSTS</a></li> -->
+            <li class="center"><a href="/app/signup">SIGN UP</a></li> 
+            <li class="center"><a href="/app/login">LOGIN</a></li>
+            <li class="center"><a href="/app/logout">LOGOUT</a></li>
           </ul>
         </div>
       </nav>
@@ -68,12 +58,9 @@
             <ul>
             <li><a href="/app/games">Games</a></li>
             <li><a href="/forums">Forum</a></li>
-            {% if user.is_authenticated %}
-              <li><a href="/app/login">Logout</a></li>
-            {% else %}
-              <li><a href="/app/signup">Sign Up</a></li>
-              <li><a href="/app/login">Login</a></li>
-            {% endif %}
+            <li><a href="/app/signup">Sign Up</a></li>
+            <li><a href="/app/login">Login</a></li>
+            <li><a href="/app/logout">Logout</a></li>
           </ul>
           </div>
         </div>

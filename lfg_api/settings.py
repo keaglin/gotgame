@@ -127,6 +127,10 @@ STATIC_URL = '/static/'
 
 MEDIA_URL = '/media/'
 
+LOGIN_REDIRECT_URL = '/app/games'
+LOGIN_URL = '/login'
+LOGOUT_REDIRECT_URL = '/app/games'
+
 import django_heroku
 django_heroku.settings(locals())
 

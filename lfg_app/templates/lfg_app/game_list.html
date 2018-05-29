@@ -2,13 +2,15 @@
 
 {% block content %}
 <div class="row">
-  {% for game in object_list %}
     <ul>
-      <a href="{{ game.id }}">
-        <li class="col s3 center">
-          <div><img src={{ game.img }} alt={{game.title}} "cover"></div>
-        </li>
-      </a>
+      {% for game in object_list %}
+      <li class="col s12 m3 center">
+        <div>
+          <a href="{{ game.id }}">
+            <img src={{ game.img }} alt={{game.title}} "cover">
+          </a>
+        </div>
+      </li>
       {% empty %}
       <li>No posts yet.</li>
   {% endfor %}

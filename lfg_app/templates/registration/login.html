@@ -4,7 +4,7 @@
 <div class="row">
   <h2 class="center">Login</h2>
   <div class="col s6 offset-s3">
-    <form method="POST">
+    <form action="{% url 'login' %}" method="POST">
       {% csrf_token %}
       {{ form }}
       <input class="btn" type="submit" value="login" />
