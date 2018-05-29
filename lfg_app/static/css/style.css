@@ -119,3 +119,21 @@ li img {
 .post-title {
   background: purple;
 }
+
+/* label color */
+/* label { */
+/* .input-field label { */
+  /* color: #fff;
+} */
+/* label focus color */
+/* label:focus {
+  color: #26a69a !important;
+}
+
+/* label underline focus color */
+/* label + input:focus {
+  border-bottom: 1px solid #26a69a !important;
+} */
+input {
+  color: white;
+}

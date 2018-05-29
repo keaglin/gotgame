@@ -1,6 +1,8 @@
 from django.contrib.auth.models import User, Group
-from django.views.generic       import ListView, DetailView, UpdateView, DeleteView, FormView
+from django.views.generic       import ListView, DetailView, UpdateView, DeleteView, FormView, CreateView
 from .models import Game, Post, Comment
+from django.contrib.auth.forms import UserCreationForm
+from django.urls import reverse_lazy
 
 class ListPost(ListView):
     queryset = Post.objects.all()
@@ -39,3 +41,8 @@ class UserDetail(DetailView):
 #     # required_scopes = ['groups']
 #     queryset = Group.objects.all()
 #     # serializer_class = serializers.GroupSerializer
+
+class SignUp(CreateView):
+    form_class = UserCreationForm
+    success_url = reverse_lazy('login')
+    template_name = 'signup.html'

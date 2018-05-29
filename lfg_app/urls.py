@@ -11,4 +11,5 @@ urlpatterns = [
     path('posts/<int:pk>/', views.DetailPost.as_view()),
     path('login/', auth_views.login, name="login"),
     path('logout/', auth_views.logout, name="logout"),
+    path('signup/', views.SignUp.as_view(), name="signup")
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
