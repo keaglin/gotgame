@@ -26,7 +26,7 @@
             </div>
             <div class="right">
               {% if user.is_authenticated %}
-                <li class="center"><a href="/app/login">LOGOUT</a></li>
+                <li class="center"><a href="/app/logout">LOGOUT</a></li>
               {% else %}
                 <li class="center"><a href="/app/signup">SIGN UP</a></li> 
                 <li class="center"><a href="/app/login">LOGIN</a></li>
@@ -40,7 +40,7 @@
             </div>
             <div class="right">
               {% if user.is_authenticated %}
-                <li class="center"><a href="/app/login">LOGOUT</a></li>
+                <li class="center"><a href="/app/logout">LOGOUT</a></li>
               {% else %}
                 <li class="center"><a href="/app/signup">SIGN UP</a></li> 
                 <li class="center"><a href="/app/login">LOGIN</a></li>
@@ -69,7 +69,7 @@
             <li><a href="/app/games">Games</a></li>
             <li><a href="/forums">Forum</a></li>
             {% if user.is_authenticated %}
-              <li><a href="/app/login">Logout</a></li>
+              <li><a href="/app/logout">Logout</a></li>
             {% else %}
               <li><a href="/app/signup">Sign Up</a></li>
               <li><a href="/app/login">Login</a></li>

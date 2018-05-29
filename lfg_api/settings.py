@@ -41,7 +41,6 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
-    'corsheaders.middleware.CorsMiddleware', # new
     'django.middleware.common.CommonMiddleware', # new
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -128,8 +127,8 @@ STATIC_URL = '/static/'
 MEDIA_URL = '/media/'
 
 LOGIN_REDIRECT_URL = '/app/games'
-LOGIN_URL = '/login'
 LOGOUT_REDIRECT_URL = '/app/games'
+LOGIN_URL = '/app/login'
 
 import django_heroku
 django_heroku.settings(locals())
