@@ -3,6 +3,7 @@ from django.views.generic       import ListView, DetailView, UpdateView, DeleteV
 from .models import Game, Post, Comment
 from django.contrib.auth.forms import UserCreationForm
 from django.urls import reverse_lazy
+from django.contrib.auth.mixins import LoginRequiredMixin
 
 class ListPost(ListView):
     queryset = Post.objects.all()
@@ -13,6 +14,20 @@ class DetailPost(DetailView):
     # permission_classes = [permissions.IsAuthenticated,]
     queryset = Post.objects.all()
     # serializer_class = serializers.PostSerializer
+
+class CreatePost(LoginRequiredMixin, CreateView):
+    model = Post
+    fields = ['title', 'content']
+    success_url = reverse_lazy('game_detail')
+
+class UpdatePost(LoginRequiredMixin, UpdateView):
+    model = Post
+    fields = ['title', 'content']
+    success_url = reverse_lazy('game_detail')
+
+class DeletePost(LoginRequiredMixin, DeleteView):
+    model = Post
+    success_url = reverse_lazy('game_detail')
 
 class ListGames(ListView):
     model = Game

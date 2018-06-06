@@ -137,3 +137,7 @@ li img {
 input {
   color: white;
 }
+
+a.btn {
+  color: white !important;
+}
