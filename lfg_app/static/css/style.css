@@ -11,6 +11,8 @@ body {
   flex-direction: column;
   justify-content: space-between;
   color: white;
+  background-image: url('../img/gotgame-bg.jpg');
+  background-size: cover;
 }
 
 header, footer, main {
@@ -68,36 +70,9 @@ a:hover {
 
 main {
   min-height: 100vh;
-  background-image: url('../img/gotgame-bg.jpg');
-  background-position: 50% 50%;
-  background-repeat: no-repeat;
   margin-top: -20px;
   margin-bottom: 0 !important;
 }
-
-/* #background {
-  position: relative;
-  top:0;
-  left:0;
-  right:0;
-  bottom:0; 
-  min-width: 100%;
-  min-height: 100vh;
-  margin-top: -20px;
-  margin-bottom: 0;
-  background-image: url("../img/ben-neale-297658-unsplash.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
-  filter: blur(10px) brightness(60%); 
-  z-index: -1; 
-}
-*/
-
-/* #app {
-  position: absolute;
-  z-index: 1;
-} */
 
 .sidenav {
   background: #1a237e;
@@ -142,6 +117,7 @@ img.game:hover {
 /* label + input:focus {
   border-bottom: 1px solid #26a69a !important;
 } */
+
 input {
   color: white;
 }
