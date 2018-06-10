@@ -3,11 +3,16 @@
 {% block content %}
 <div class="row"></div>
 <div class="row">
-    <div class="col s12 center"><img src={{ game.img }} alt={{game.title}} "cover"></div>
+  <div class="col s12 center">
+    <img src={{ game.img }} alt={{game.title}} class="game-detail">
+    <h4>{{game.title}}</h4>
+  </div>
 </div>
 <div class="row">
   <div class="col s12 center">
-    <a href="posts/new" class="btn">New Post</a>
+    {# {% if user.is_authenticated %} #}
+      <a href="posts/new" class="btn">New Post</a>
+    {# {% endif %} #}
   </div>
 </div>
 <div class="row">
@@ -16,9 +21,17 @@
     {% if post.game.id == game.id %}
       <li class="col s12">
         <div class="col s12 m6 offset-m3 post">
-          <p class="post-title">{{post.title}}</p>
-          <p>{{post.content}}</p>
-          <p>Posted by: {{post.user}}</p>
+          <div>
+            <p class="post-title">{{post.title}}</p>
+            <p>{{post.content}}</p>
+            <p>Posted by: {{post.user}}</p>
+          </div>
+          <div class="right">
+            {% if post.user.id == user.id %}
+              <a href="posts/edit" class="btn">Edit</a> 
+              <a href="posts/delete" class="btn">Delete</a> 
+            {% endif %}
+          </div>
         </div>
       </li>
     {% endif %}
