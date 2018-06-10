@@ -107,9 +107,17 @@ li {
   list-style: none;
 }
 
-li img {
+.game {
+  margin: 20px 0;
+}
+
+img.game {
   height: 250px;
   width: 200px;
+}
+
+img.game:hover {
+  border: 2px solid #69f0ae;
 }
 
 .post {
