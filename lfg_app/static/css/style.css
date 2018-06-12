@@ -13,7 +13,7 @@ body {
   flex-direction: column;
   justify-content: space-between;
   color: white;
-  background-image: url('../img/gotgame-bg.jpg');
+  background: url('../img/gotgame-bg.jpg') no-repeat top center fixed;
   background-size: cover;
 }
 
@@ -79,12 +79,37 @@ img.game:hover {
 }
 
 .post {
-  border: 2px white solid;
+  /* color: black; */
+  /* border: 2px white solid; */
+  /* background: #2D3472d3; */
+  /* background: #141414d3; */
+  margin: 10px;
+  padding: 0 !important;
+  background: #141414d3;
+}
+.post-title {
+  background: #1a227ebd;
+  margin-top: 0;
+  padding: 5px 0;
+  border-bottom: solid 2px #141414;
 }
 
-.post-title {
-  background: purple;
-}
+/* 
+Prospective Colors
+47E5BC
+like a mellow version of the green I'm already using
+
+C03221
+red
+*/
+
+/* My Colors */
+/* 
+  green 69f0ae
+  purple 1a237e
+  black 141414
+  dusty purple 2d3472?
+*/
 
 /* label color */
 /* label { */

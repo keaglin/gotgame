@@ -16,28 +16,40 @@
   </div>
 </div>
 <div class="row">
-  <ul>
-    {% for post in post_list %}
-    {% if post.game.id == game.id %}
-      <li class="col s12">
-        <div class="col s12 m6 offset-m3 post">
-          <div>
-            <p class="post-title">{{post.title}}</p>
-            <p>{{post.content}}</p>
-            <p>Posted by: {{post.user}}</p>
+  <div class="post-container">
+    <ul>
+      {% for post in post_list %}
+      {% if post.game.id == game.id %}
+        <li class="col s12">
+          <div class="col s12 m6 offset-m3 post">
+            <!-- 
+              thinking about making the above div into 2
+              so the first one would be the col thing
+              and the second would be the post container
+              which would be a row in and of itself
+              that way, I can make the post content and
+              the buttons columns and make sure they 
+              collapse properly on mobile; but let's focus
+              on the task at hand for a bit
+            -->
+            <div>
+              <p class="post-title">{{post.title}}</p>
+              <p>{{post.content}}</p>
+              <p>Posted by: {{post.user}}</p>
+            </div>
+            <div class="right">
+              {% if post.user.id == user.id %}
+                <a href="posts/edit" class="btn">Edit</a> 
+                <a href="posts/delete" class="btn">Delete</a> 
+              {% endif %}
+            </div>
           </div>
-          <div class="right">
-            {% if post.user.id == user.id %}
-              <a href="posts/edit" class="btn">Edit</a> 
-              <a href="posts/delete" class="btn">Delete</a> 
-            {% endif %}
-          </div>
-        </div>
-      </li>
-    {% endif %}
-      {% empty %}
-      <li>No posts yet.</li>
-    {% endfor %}
-  </ul>
+        </li>
+      {% endif %}
+        {% empty %}
+        <li>No posts yet.</li>
+      {% endfor %}
+    </ul>
+  </div>
 </div>
 {% endblock %}

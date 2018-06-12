@@ -14,7 +14,8 @@ Model-related Forms
   - Comments: update, create, delete
   - Games: update, create, delete (+ admin priv)
 
-"Add" button for creating when on the "List" page; only admins can add new games
+"Add" button for creating when on the "List" page; only admins can add new games  
+Also: delete
 
 Comments: where are they displayed? and how? Maybe they drop down somehow? 
 

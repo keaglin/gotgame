@@ -6,8 +6,8 @@ from django.contrib.auth import views as auth_views
 
 
 urlpatterns = [
-    path('games/', views.ListGames.as_view()),
-    path('games/<int:pk>/', views.DetailGame.as_view()),
+    path('games/', views.ListGames.as_view(), name='game_list'),
+    path('games/<slug>/', views.DetailGame.as_view(), name='game_detail'),
     path('posts/<int:pk>/edit', views.UpdatePost.as_view()),
     path('posts/<int:pk>/delete', views.DeletePost.as_view()),
     path('games/<int:pk>/posts/new', views.CreatePost.as_view()),
