@@ -22,7 +22,7 @@ pylint==1.8.3
 pylint-django==0.10.1
 pylint-plugin-utils==0.2.6
 pytz==2018.3
-requests==2.18.4
+requests==2.20.0
 six==1.11.0
 stevedore==1.28.0
 tornado==5.0.2
